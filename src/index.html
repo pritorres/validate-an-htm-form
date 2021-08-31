@@ -13,6 +13,7 @@
     <link rel="shortcut icon" href="./4geeks.ico" />
   </head>
   <body>
+      <form class="needs-validation" novalidate id="myFormulario">
     <div class="container">
         <div class="row ">
             <div class="col-12 pt-5">
@@ -33,30 +34,48 @@
 
                             <div class="col-md-5 mb-3">
                                 <label for="inputPassword5" class="form-label">Card #</label>
-                                <input type="text" class="form-control" placeholder="XXXXXXXXXXXXXXX" />
+                                <input id="CardNro" type="text" class="form-control" placeholder="XXXXXXXXXXXXXXX" />
+                                <div class="invalid-tooltip">
+                                    Debe tener numeros y guion.
+                                  </div>
                             </div>
                             <div class="col-md-3 mb-3">
                                 <label for="inputPassword5" class="form-label">CVC #</label>
-                                <input type="number" class="form-control" placeholder="0000" />
+                                <input id="CVC" type="number" class="form-control" placeholder="0000" />
+                                <div class="invalid-tooltip">
+                                    debe tener numeros.
+                                  </div>
 
                             </div>
                             <div class="col-md-4 mb-3">
                                 <label for="inputPassword5" class="form-label">Amount</label>
                                 <input type="text" class="form-control" placeholder="Amount" />
+                                <div class="invalid-tooltip">
+                                    Debe tener numeros.
+                                  </div>
                             </div>
                             <div class="col-md-6 mb-3">
                                 <label for="inputPassword5" class="form-label">First Name</label>
                                 <input type="text" class="form-control" />
+                                <div class="invalid-tooltip">
+                                    Debe solo llevar letras.
+                                  </div>
                             </div>
 
                             <div class="col-md-6 mb-3">
                                 <label for="inputPassword5" class="form-label">Last Name</label>
                                 <input type="text" class="form-control" />
+                                <div class="invalid-tooltip">
+                                    Debe solo llevar letras.
+                                  </div>
                             </div>
 
                             <div class="col-md-6 mb-3">
                                 <label for="inputPassword5" class="form-label">City</label>
                                 <input type="text" class="form-control" />
+                                <div class="invalid-tooltip">
+                                    Debe solo llevar letras.
+                                  </div>
                             </div>
 
                             <div class="col-md-3 mb-3">
@@ -72,6 +91,9 @@
                             <div class="col-md-3 mb-3">
                                 <label for="inputPassword5" class="form-label">Postal Code</label>
                                 <input type="text" class="form-control" />
+                                <div class="invalid-tooltip">
+                                    Debe solo llevar numeros.
+                                  </div>
                             </div>
 
 
@@ -83,6 +105,9 @@
                                         <div class="form-check form-check-inline">
                                             <input class="form-check-input " type="radio" name="inlineRadioOptions"
                                                 id="inlineRadio1" value="option1" />
+                                                <div class="invalid-tooltip">
+                                                    Please provide a valid city.
+                                                  </div>
                                             <label class="form-check-label " for="inlineRadio1"><i
                                                     class="fab fa-cc-mastercard "></i></label>
                                         </div>
@@ -90,18 +115,27 @@
                                         <div class="form-check form-check-inline ">
                                             <input class="form-check-input" type="radio" name="inlineRadioOptions"
                                                 id="inlineRadio2" value="option2" />
+                                                <div class="invalid-tooltip">
+                                                    Please provide a valid city.
+                                                  </div>
                                             <label class="form-check-label" for="inlineRadio2"><i
                                                     class="fab fa-cc-visa"></i></label>
                                         </div>
                                         <div class="form-check form-check-inline ">
                                             <input class="form-check-input" type="radio" name="inlineRadioOptions"
                                                 id="inlineRadio2" value="option2" />
+                                                <div class="invalid-tooltip">
+                                                    Please provide a valid city.
+                                                  </div>
                                             <label class="form-check-label" for="inlineRadio2"><i
                                                     class="fab fa-cc-amex"></i></label>
                                         </div>
                                         <div class="form-check form-check-inline m-0">
                                             <input class="form-check-input" type="radio" name="inlineRadioOptions"
                                                 id="inlineRadio2" value="option2" />
+                                                <div class="invalid-tooltip">
+                                                    Please provide a valid city.
+                                                  </div>
                                             <label class="form-check-label" for="inlineRadio2"><i
                                                     class="fab fa-cc-discover"></i></label>
                                         </div>
@@ -111,7 +145,7 @@
                             </div>
                             <div class="col-md-6 ">
                                 <label for="inputPassword5" class="form-label">Message</label>
-                                <textarea class="d-block border border-1 rounded" cols="75" rows="5"></textarea>
+                                <textarea class="form-control border border-1 rounded" cols="75" rows="5"></textarea>
                                 <div id="emailHelp" class="form-teaaxt">Add any notes here.</div>
                             </div>
                         </div>
@@ -119,13 +153,14 @@
                     <div class="card-footer text-muted d-grid gap-2 d-md-flex justify-content-md-end">
 
                         <button class="btn btn-primary me-md-2 btn-secondary" type="button">Cancel</button>
-                        <button class="btn btn-primary" type="button">Send</button>
+                        <button class="btn btn-primary" type="Submit" id="Submit">Send</button>
 
                     </div>
 
                 </div>
             </div>
         </div>
+    </form>
         <script>src="./app.js"</script>
         <script
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
